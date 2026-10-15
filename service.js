@@ -10,7 +10,7 @@ const KNOWLEDGE_DIR = path.join(__dirname, "knowledge");
 const EMBEDDING_MODEL = "text-embedding-3-small";
 
 const openai = new OpenAI({
-  baseURL: "https://openrouter.ai/api/v1",
+  baseURL: process.env.OPENAI_AI_BASE_URL,
   apiKey: process.env.OPENAI_API_KEY,
 });
 const pool = new Pool({
