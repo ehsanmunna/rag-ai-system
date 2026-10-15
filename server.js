@@ -69,7 +69,7 @@ app.post("/query", async (req, res) => {
   } catch (error) {
     console.log(error);
     res.status(500).json({
-      message: "Error occurred",
+      message: error.error.message || "Error occurred",
     });
   }
 });
